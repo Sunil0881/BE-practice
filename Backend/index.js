@@ -53,6 +53,22 @@ app.delete('/users/:id', async (req, res) => {
   }
 });
 
+
+
+app.put('/users/:id', async (req, res) => {
+  const { id } = req.params;
+  const { name, age } = req.body;
+  try {
+    const updatedUser = await User.findByIdAndUpdate(id, { name, age }, { new: true });
+    res.json(updatedUser);
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
