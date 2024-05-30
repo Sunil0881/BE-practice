@@ -1,0 +1,14 @@
+.tiro-tamil {
+    font-family: "Tiro Tamil", serif;
+}
+
+
+@font-face {
+    font-family: 'YourFont';
+    src: url('../src//font//Anantha.ttf') format('truetype'); /* Safari, Android, iOS */
+  }
+
+
+  .jacquardr {
+    font-family: "Jacquard 12", system-ui;
+  }
